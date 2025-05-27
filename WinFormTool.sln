@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33927.289
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormTool", "WinFormTool\WinFormTool.csproj", "{E275897C-1949-4C41-8606-B52C95EB93AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E275897C-1949-4C41-8606-B52C95EB93AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E275897C-1949-4C41-8606-B52C95EB93AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E275897C-1949-4C41-8606-B52C95EB93AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E275897C-1949-4C41-8606-B52C95EB93AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB6A31D7-C80B-4924-A326-106BA076C3F3}
+	EndGlobalSection
+EndGlobal
