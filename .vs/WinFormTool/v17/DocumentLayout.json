@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\AllProject\\Develop\\WinFormTool\\WinFormTool\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormTool\\Form1.cs",
-              "ToolTip": "D:\\AllProject\\Develop\\WinFormTool\\WinFormTool\\Form1.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WinFormTool\\Form1.cs [\u8BBE\u8BA1]",
+              "ToolTip": "D:\\AllProject\\Develop\\WinFormTool\\WinFormTool\\Form1.cs [Design]",
+              "RelativeToolTip": "WinFormTool\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T06:01:38.13Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "EditorCaption": " [Design]"
             }
           ]
         }

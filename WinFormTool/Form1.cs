@@ -28,6 +28,8 @@ namespace WinFormTool
         {
             //默认选择处理方法1
             listBox_HandleMethod.SelectedIndex = 0;
+            //默认选择不做任何转换
+            listBox_ConvertOpreation.SelectedIndex = 0;
         }
 
         string selectHandeMethodName = "";
@@ -281,7 +283,7 @@ namespace WinFormTool
             }
             else
             {
-                MessageBox.Show("当前需处理的数据1不包含[\t]字符不用不符合处理规则，无法处理！！！", "错误提示",
+                MessageBox.Show("当前需处理的数据1不包含[\\t]字符不用不符合处理规则，无法处理！！！", "错误提示",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
@@ -370,7 +372,7 @@ namespace WinFormTool
             }
             else
             {
-                MessageBox.Show("当前需处理的数据1不包含[\t]字符不用不符合处理规则，无法处理！！！", "错误提示",
+                MessageBox.Show("当前需处理的数据1不包含[\\t]字符不用不符合处理规则，无法处理！！！", "错误提示",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
