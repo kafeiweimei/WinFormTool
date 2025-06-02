@@ -38,6 +38,14 @@ namespace WinFormTool
             selectHandeMethodName = curItem;
         }
 
+        string selectConvertMethodName="";
+        private void listBox_ConvertOpreation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string curItem = listBox_ConvertOpreation.SelectedItem.ToString();
+            int index = listBox_HandleMethod.FindString(curItem);
+            selectConvertMethodName = curItem;
+        }
+
         bool isClearFirstAndLastSpace = false;
         private void checkBox_IsClearFirstAndLastSpace_Click(object sender, EventArgs e)
         {
@@ -114,16 +122,16 @@ namespace WinFormTool
             switch (selectHandeMethodName)
             {
                 case "处理方法一":
-                    HandleDataMethod1(textBox_Datas1,textBox_Datas2,isClearFirstAndLastSpace);
+                    HandleDataMethod1(textBox_Datas1, textBox_Datas2, selectConvertMethodName, isClearFirstAndLastSpace);
                     break;
                 case "处理方法二":
-                    HandleDataMethod2(textBox_Datas1, textBox_Datas2, isClearFirstAndLastSpace);
+                    HandleDataMethod2(textBox_Datas1, textBox_Datas2, selectConvertMethodName, isClearFirstAndLastSpace);
                     break;
                 case "处理方法三":
-                    HandleDataMethod3(textBox_Datas1, textBox_Datas2, isClearFirstAndLastSpace);
+                    HandleDataMethod3(textBox_Datas1, textBox_Datas2, selectConvertMethodName, isClearFirstAndLastSpace);
                     break;
                 default:
-                    HandleDataMethod1(textBox_Datas1, textBox_Datas2, isClearFirstAndLastSpace);
+                    HandleDataMethod1(textBox_Datas1, textBox_Datas2, selectConvertMethodName, isClearFirstAndLastSpace);
                     break;
             }
             
@@ -198,8 +206,9 @@ namespace WinFormTool
         /// </summary>
         /// <param name="OriginalDataTextBox">原始数据的TextBox控件</param>
         /// <param name="acceptTextBox">接收处理后数据的TextBox控件</param>
+        /// <param name="selectConvertMethodName">选择转换的方法名称</param>
         /// <param name="isClearFirstAndLastSpace">是否去除每行内容的首尾空格</param>
-        private void HandleDataMethod1(TextBox OriginalDataTextBox, TextBox acceptTextBox, bool isClearFirstAndLastSpace = false)
+        private void HandleDataMethod1(TextBox OriginalDataTextBox, TextBox acceptTextBox, string selectConvertMethodName = "不做任何转换", bool isClearFirstAndLastSpace = false)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(OriginalDataTextBox.Text);
@@ -229,6 +238,20 @@ namespace WinFormTool
                             strTmp = strTmp.Replace('\n', ' ').Trim();
                         }
 
+                        switch (selectConvertMethodName)
+                        {
+                            case "不做任何转换":
+                                break;
+                            case "全部转为大写":
+                                strTmp = strTmp.ToUpper();
+                                break;
+                            case "全部转为小写":
+                                strTmp = strTmp.ToLower();
+                                break;
+                            default:
+                                break;
+                        }
+
                         string str = $"'{strTmp}'";
                         realLen--;
                         if (realLen > 0)
@@ -239,6 +262,7 @@ namespace WinFormTool
 
                         //System.Threading.Thread.Sleep(10);
                     }
+
 
                     acceptTextBox.Text = sb2.ToString();
 
@@ -268,8 +292,9 @@ namespace WinFormTool
         /// </summary>
         /// <param name="OriginalDataTextBox">原始数据的TextBox控件</param>
         /// <param name="acceptTextBox">接收处理后数据的TextBox控件</param>
+        /// <param name="selectConvertMethodName">选择转换的方法名称</param>
         /// <param name="isClearFirstAndLastSpace">是否去除每行内容的首尾空格</param>
-        private void HandleDataMethod2(TextBox OriginalDataTextBox, TextBox acceptTextBox, bool isClearFirstAndLastSpace = false)
+        private void HandleDataMethod2(TextBox OriginalDataTextBox, TextBox acceptTextBox,string selectConvertMethodName = "不做任何转换", bool isClearFirstAndLastSpace = false)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(OriginalDataTextBox.Text);
@@ -301,6 +326,22 @@ namespace WinFormTool
                             }
                            
                         }
+
+                        switch (selectConvertMethodName)
+                        {
+                            case "不做任何转换":
+                               
+                                break;
+                            case "全部转为大写":
+                                strTmp = strTmp.ToUpper();
+                                break;
+                            case "全部转为小写":
+                                strTmp = strTmp.ToLower();
+                                break;
+                            default:
+                                break;
+                        }
+
                         string str = $"'{strTmp}'";
 
                         if (i < len - 2)
@@ -339,8 +380,9 @@ namespace WinFormTool
         /// </summary>
         /// <param name="OriginalDataTextBox">原始数据的TextBox控件</param>
         /// <param name="acceptTextBox">接收处理后数据的TextBox控件</param>
+        /// <param name="selectConvertMethodName">选择转换的方法名称</param>
         /// <param name="isClearFirstAndLastSpace">是否去除每行内容的首尾空格</param>
-        private void HandleDataMethod3(TextBox OriginalDataTextBox,TextBox acceptTextBox,bool isClearFirstAndLastSpace=false)
+        private void HandleDataMethod3(TextBox OriginalDataTextBox,TextBox acceptTextBox,string selectConvertMethodName = "不做任何转换", bool isClearFirstAndLastSpace=false)
         {
             if (!string.IsNullOrEmpty(OriginalDataTextBox.Text))
             {
@@ -359,6 +401,21 @@ namespace WinFormTool
                         if (isClearFirstAndLastSpace)
                         {
                             strTmp = strTmp.Trim();
+                        }
+
+                        switch (selectConvertMethodName)
+                        {
+                            case "不做任何转换":
+                               
+                                break;
+                            case "全部转为大写":
+                                strTmp = strTmp.ToUpper();
+                                break;
+                            case "全部转为小写":
+                                strTmp = strTmp.ToLower();
+                                break;
+                            default:
+                                break;
                         }
 
                         if (i == len - 2)
@@ -430,6 +487,8 @@ namespace WinFormTool
                 throw new Exception(ex.Message);
             }
         }
+
+
 
     }//Class_end
 }

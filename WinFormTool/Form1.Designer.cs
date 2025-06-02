@@ -47,6 +47,7 @@ namespace WinFormTool
             this.button_ClearClipboard = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.linkLabel_Author = new System.Windows.Forms.LinkLabel();
+            this.listBox_ConvertOpreation = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,6 +97,7 @@ namespace WinFormTool
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.listBox_ConvertOpreation);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.listBox_HandleMethod);
@@ -203,7 +205,7 @@ namespace WinFormTool
             // 
             this.button_CopyDatas2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_CopyDatas2.Location = new System.Drawing.Point(464, 253);
+            this.button_CopyDatas2.Location = new System.Drawing.Point(461, 315);
             this.button_CopyDatas2.Name = "button_CopyDatas2";
             this.button_CopyDatas2.Size = new System.Drawing.Size(224, 31);
             this.button_CopyDatas2.TabIndex = 3;
@@ -215,7 +217,7 @@ namespace WinFormTool
             // 
             this.button_AddCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_AddCharacter.Location = new System.Drawing.Point(464, 190);
+            this.button_AddCharacter.Location = new System.Drawing.Point(461, 266);
             this.button_AddCharacter.Name = "button_AddCharacter";
             this.button_AddCharacter.Size = new System.Drawing.Size(224, 31);
             this.button_AddCharacter.TabIndex = 2;
@@ -227,7 +229,7 @@ namespace WinFormTool
             // 
             this.button_ClearDatas1Datas2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ClearDatas1Datas2.Location = new System.Drawing.Point(464, 387);
+            this.button_ClearDatas1Datas2.Location = new System.Drawing.Point(461, 414);
             this.button_ClearDatas1Datas2.Name = "button_ClearDatas1Datas2";
             this.button_ClearDatas1Datas2.Size = new System.Drawing.Size(224, 31);
             this.button_ClearDatas1Datas2.TabIndex = 5;
@@ -250,7 +252,7 @@ namespace WinFormTool
             // 
             this.button_ClearClipboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ClearClipboard.Location = new System.Drawing.Point(464, 318);
+            this.button_ClearClipboard.Location = new System.Drawing.Point(461, 365);
             this.button_ClearClipboard.Name = "button_ClearClipboard";
             this.button_ClearClipboard.Size = new System.Drawing.Size(224, 31);
             this.button_ClearClipboard.TabIndex = 4;
@@ -263,7 +265,7 @@ namespace WinFormTool
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1148, 612);
+            this.tabPage2.Size = new System.Drawing.Size(1148, 589);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "工具2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -278,6 +280,22 @@ namespace WinFormTool
             this.linkLabel_Author.TabStop = true;
             this.linkLabel_Author.Text = "关于作者";
             this.linkLabel_Author.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Author_LinkClicked);
+            // 
+            // listBox_ConvertOpreation
+            // 
+            this.listBox_ConvertOpreation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_ConvertOpreation.FormattingEnabled = true;
+            this.listBox_ConvertOpreation.ItemHeight = 17;
+            this.listBox_ConvertOpreation.Items.AddRange(new object[] {
+            "不做任何转换",
+            "全部转为大写",
+            "全部转为小写"});
+            this.listBox_ConvertOpreation.Location = new System.Drawing.Point(461, 159);
+            this.listBox_ConvertOpreation.Name = "listBox_ConvertOpreation";
+            this.listBox_ConvertOpreation.Size = new System.Drawing.Size(224, 55);
+            this.listBox_ConvertOpreation.TabIndex = 15;
+            this.listBox_ConvertOpreation.SelectedIndexChanged += new System.EventHandler(this.listBox_ConvertOpreation_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -319,6 +337,7 @@ namespace WinFormTool
         private System.Windows.Forms.Label label_Tips0;
         private System.Windows.Forms.ListBox listBox_HandleMethod;
         private System.Windows.Forms.LinkLabel linkLabel_Author;
+        private System.Windows.Forms.ListBox listBox_ConvertOpreation;
     }
 }
 
